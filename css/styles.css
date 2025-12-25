@@ -1,0 +1,362 @@
+:root {
+  --primary-color: #2E5BFF;
+  --secondary-color: #4A4E74;
+  --accent-color: #00A86B;
+  --dark-color: #2E384D;
+  --light-color: #F8FAFC;
+  --logo-bg: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.calculator-wrapper {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: var(--light-color);
+}
+
+.calculator-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(46, 91, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(46, 91, 255, 0.08);
+}
+
+.calculator-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1.75rem;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 12px;
+  background-color: var(--logo-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.text-info {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 400;
+}
+
+.form-floating label {
+  color: var(--secondary-color);
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.form-control {
+  border-radius: 6px;
+  padding: 1rem;
+  border: 1px solid #E0E6ED;
+  transition: all 0.2s ease;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(46, 91, 255, 0.15);
+}
+
+/* Growth Options Container */
+.growth-options-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.growth-options-container .form-floating {
+  flex: 1;
+}
+
+.option-separator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.option-separator::before,
+.option-separator::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 20px;
+  background-color: #E0E6ED;
+}
+
+.option-separator::before {
+  left: -25px;
+}
+
+.option-separator::after {
+  right: -25px;
+}
+
+.calculate-btn {
+  padding: 0.85rem;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 91, 255, 0.2);
+  background: var(--secondary-color);
+}
+
+.results-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.75rem;
+  border: 1px solid rgba(46, 91, 255, 0.1);
+}
+
+.result-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  height: 100%;
+  border-left: 3px solid var(--accent-color);
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.result-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 168, 107, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.result-content h5 {
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
+.result-value {
+  color: var(--dark-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(46, 91, 255, 0.1);
+}
+
+/* Yearly Breakdown Table Styling */
+.table-responsive {
+  margin-top: 2rem;
+}
+
+.table-responsive h4 {
+  color: var(--dark-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.table-responsive h4 i {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+#yearlyTable {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(46, 91, 255, 0.1);
+  margin-top: 1rem;
+}
+
+#yearlyTable thead {
+  background: var(--primary-color) !important;
+  color: white;
+}
+
+#yearlyTable thead th {
+  background: var(--primary-color) !important;
+  color: white !important;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+}
+
+#yearlyTable tbody tr {
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+#yearlyTable tbody tr:nth-child(even) {
+  background-color: rgba(248, 250, 252, 0.7);
+}
+
+#yearlyTable tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+#yearlyTable tbody tr:hover {
+  background-color: rgba(0, 168, 107, 0.08);
+  transform: translateX(2px);
+}
+
+#yearlyTable tbody td {
+  padding: 0.85rem;
+  color: var(--dark-color);
+  border-top: 1px solid rgba(46, 91, 255, 0.05);
+  font-weight: 500;
+}
+
+#yearlyTable tbody td:first-child {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+#yearlyTable tbody td:nth-child(4),
+#yearlyTable tbody td:nth-child(5) {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .calculator-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .calculator-header {
+    padding: 1.25rem;
+  }
+  
+  .growth-options-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .option-separator {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  
+  .option-separator::before,
+  .option-separator::after {
+    width: 40%;
+  }
+  
+  .option-separator::before {
+    left: 0;
+  }
+  
+  .option-separator::after {
+    right: 0;
+  }
+  
+  .result-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .result-icon {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  #yearlyTable thead th,
+  #yearlyTable tbody td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .calculator-wrapper {
+    padding: 1rem 0.5rem;
+  }
+  
+  .calculator-card {
+    border-radius: 10px;
+  }
+  
+  .result-value {
+    font-size: 1.2rem;
+  }
+  
+  .calculate-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .results-container {
+    padding: 1.25rem;
+  }
+  
+  .logo {
+    height: 70px;
+    max-width: 180px;
+    padding: 8px;
+  }
+  
+  .table-responsive h4 {
+    font-size: 1.1rem;
+  }
+  
+  #yearlyTable {
+    font-size: 0.85rem;
+  }
+}
